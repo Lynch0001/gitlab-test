@@ -26,7 +26,7 @@ fi
 
 # === Fetch from github ===
 echo "Fetching from github..." >> "$LOGFILE"
-"$GIT_BIN" fetch origin
+"$GIT_BIN" fetch origin --prune
 
 # === Push to GitLab ===
 echo "Force Pushing to GitLab..." >> "$LOGFILE"
