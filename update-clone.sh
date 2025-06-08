@@ -24,11 +24,6 @@ if ! "$GIT_BIN" remote get-url gitlab &>/dev/null; then
 fi
 "$GIT_BIN" remote set-url origin "$GITHUB_URL"
 
-# === Pruning ===
-echo "Pruning ..." >> "$LOGFILE"
-"$GIT_BIN" prune origin
-"$GIT_BIN" prune gitlab
-
 # === Fetch from github ===
 echo "Fetching from github..." >> "$LOGFILE"
 "$GIT_BIN" fetch origin
